@@ -1,3 +1,4 @@
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/api/otentikasi/auth.service';
@@ -8,22 +9,23 @@ import { AuthService } from 'src/app/api/otentikasi/auth.service';
   styleUrls: ['./fashionapp.component.scss'],
 })
 export class FashionappComponent implements OnInit {
-  constructor(public router: Router, public authService: AuthService,
-                  public afAuth: AngularFireAuth, public router: Router,) {}
+  constructor(
+    public router: Router,
+    public authService: AuthService,
+    public afAuth: AngularFireAuth
+  ) {}
 
   ngOnInit(): void {}
 
   mode: string = 'side';
 
   //LogOut
- logout()
- {
+  logout() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['cover']);
     });
- }
-
+  }
 
   //menu:
   menu = [
