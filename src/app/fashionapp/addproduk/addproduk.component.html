@@ -1,0 +1,36 @@
+<div *ngIf="loading" style="height: 300px;" class="uk-flex uk-flex-center uk-flex-middle">
+  <mat-spinner diameter="30"></mat-spinner>
+</div>
+
+<button class="buttons button2" (click)="buatItem({},-1)">Tambah Database Produk</button>
+
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Daftar Produk</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list *ngFor="let item of items; let idx=index">
+        <mat-list-item>
+          <img matListAvatar img src="https://img.icons8.com/plasticine/100/000000/mens-hoodie--v2.png" />
+          <h3 matLine>{{item.namaProduk}}</h3>
+          <p matLine>
+            <span>{{item.HargaProduk}}</span>
+          </p>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="detailItem(item,idx)">Detail</button>
+            <button mat-menu-item (click)="buatItem(item, idx)">Edit</button>
+            <button mat-menu-item (click)="deleteItem(item, idx)">Delete</button>
+          </mat-menu>
+        </mat-list-item>
+      </mat-list>
+
+      <!--DATA KEDUA-->
+
+    </mat-card-content>
+  </mat-card>
+</div>

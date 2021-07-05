@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "fashion-app-ac89c": {
+      "hosting": {
+        "Fashion-Apps": [
+          "fashion-app-ac89c"
+        ]
+      }
+    },
+    "proyek-fashion": {
+      "hosting": {
+        "Fashion-Apps": [
+          "proyek-fashion"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "proyek-fashion"
+  }
+}

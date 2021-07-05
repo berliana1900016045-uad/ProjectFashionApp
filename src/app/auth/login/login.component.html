@@ -1,0 +1,33 @@
+<div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport" style="background-image: url('assets/bg11.jpg'); ; 
+background-size: cover; background-position: center;">
+
+  <mat-card class="uk-width-1-2@m  shadow p-3 mb-5 background-color:black rounded" style="background-color:#997b66;">
+    <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+      <h1 style="font-family: Dancing Script; font-weight: 900; font-size:xx-large ; color: whitesmoke;">LOGIN</h1>
+    </div>
+    <mat-card-content>
+      <mat-form-field class="uk-width-1-1" appearance="outline" style="color: yellow;">
+        <mat-label style="color: whitesmoke;">Email</mat-label>
+        <input matInput type="email" placeholder="Ex.email@domain.com" [(ngModel)]="user.email">
+      </mat-form-field>
+
+      <mat-form-field class="uk-width-1-1" appearance="outline" style="color: yellow;">
+        <mat-label style="color: whitesmoke;">Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Your password" [(ngModel)]="user.password"
+          required>
+        <button mat-icon-button matSuffix (click)="hide = !hide">
+          <mat-icon style="color: whitesmoke;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="uk-flex uk-flex-right">
+        <div class="uk-width-expand mr-3">
+          <button class="button button1" routerLink="/register">Create Account</button>
+          <button class="button button1" routerLink="/forget">Lupa Password</button>
+        </div>
+        <button class="button button2" (click)="SignIn()">LOGIN</button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>

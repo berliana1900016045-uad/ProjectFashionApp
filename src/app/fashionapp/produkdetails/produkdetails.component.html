@@ -1,0 +1,49 @@
+<h3 mat-dialog-title>Tambah Produk Baru</h3>
+<div mat-dialog-content>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Nama Produk</mat-label>
+        <input type="text" class="form-control" required matInput [(ngModel)]="data.namaProduk" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Kode Produk</mat-label>
+        <input type="text" class="form-control" required matInput [(ngModel)]="data.kodeProduk" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Merek</mat-label>
+        <input type="text" class="form-control" required matInput [(ngModel)]="data.Merek" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Ukuran</mat-label>
+        <input type="text" class="form-control" required matInput [(ngModel)]="data.Size" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Warna</mat-label>
+        <input type="text" class="form-control" required matInput [(ngModel)]="data.Warna" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Bahan</mat-label>
+        <input type="text" class="form-control" required matInput [(ngModel)]="data.Bahan" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Asal Produk</mat-label>
+        <input matInput [(ngModel)]="data.AsalProduk" type="text">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Dikirim Dari</mat-label>
+        <input matInput [(ngModel)]="data.DikirimDari" type="text">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Deskripsi Produk</mat-label>
+        <input matInput [(ngModel)]="data.DeskripsiProduk" type="text">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga Produk</mat-label>
+        <input matInput [(ngModel)]="data.HargaProduk" type="text">
+    </mat-form-field>
+</div>
+<mat-dialog-actions>
+
+    <div mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Batal</button>
+        <button mat-raised-button color="primary" (click)="simpan()"> Simpan</button>
+    </div>

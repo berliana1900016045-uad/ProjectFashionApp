@@ -1,0 +1,57 @@
+<ng-container>
+    <!--toolbar-->
+
+    <mat-toolbar color="primary" style="background-color: #66626d;" class="example-header"
+        *ngIf="authService.userData as user">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>FASHION ONLINE STORE</span>
+        <div class="uk-width-expand"></div>
+
+        <small>{{user.email}}</small>
+        <button class="button button1" (click)="authService.SignOut()">Logout</button>
+
+    </mat-toolbar>
+    <!--end toolbar-->
+
+    <mat-sidenav-container class="fashionapp-container">
+        <mat-sidenav style="background-color: #b5838d;" #sidenav mode="side" [position]="'start'" opened
+            class="sidenav-left" [fixedInViewport]="true" [fixedTopGap]="60" [fixedBottomGap]="0">
+
+            <mat-nav-list>
+                <mat-list-item routerLink="/fashionapp/dashboard">
+                    <mat-icon matListIcon>camera_enchance</mat-icon>
+                    <h3 matLine>Edit Image</h3>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/fashionapp/addproduk">
+                    <mat-icon matListIcon>note_add</mat-icon>
+                    <h3 matLine>Database Product</h3>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/fashionapp/dashboard">
+                    <mat-icon matListIcon>laptop_chromebook</mat-icon>
+                    <h3 matLine>Produk</h3>
+                </mat-list-item>
+
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav #sidenav mode="side" [position]="'end'" class="example-sidenav" [fixedInViewport]="true"
+            [fixedTopGap]="60" [fixedBottomGap]="0">
+        </mat-sidenav>
+
+        <!--sidenav content-->
+        <mat-sidenav-content style="padding: 20px; background-color: #ccc;">
+
+            <!--halaman-halaman tampil disini-->
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+        <!--end sidenav content-->
+
+    </mat-sidenav-container>
+
+
+
+</ng-container>

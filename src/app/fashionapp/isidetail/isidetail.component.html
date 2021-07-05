@@ -1,0 +1,88 @@
+<h3 mat-dialog-title>T-Shirt Daisy Black</h3>
+<div mat-dialog-content>
+    <mat-list>
+        <h3 matSubheader>Detail Produk</h3>
+        <mat-list-item>
+            <img matListIcon img src="https://img.icons8.com/material-outlined/24/000000/product.png" />
+            <p matLine>Id</p>
+            <h3 mat-line>{{data.id}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>label</mat-icon>
+            <p matLine>Nama Produk</p>
+            <h3 mat-line>{{data.namaProduk}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>qr_code_scanner</mat-icon>
+            <p matLine>Kode Produk</p>
+            <h3 mat-line>{{data.kodeProduk}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>branding_watermark</mat-icon>
+            <p matLine>Merek</p>
+            <h3 mat-line>{{data.Merek}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>sell</mat-icon>
+            <p matLine>Ukuran/Size</p>
+            <h3 mat-line>{{data.Size}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>palette</mat-icon>
+            <p matLine>Warna</p>
+            <h3 mat-line>{{data.Warna}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <img matListIcon img src="https://img.icons8.com/ios-glyphs/30/000000/recycling.png" />
+            <p matLine>Bahan</p>
+            <h3 mat-line>{{data.Bahan}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>sell</mat-icon>
+            <p matLine>Asal Produk</p>
+            <h3 mat-line>{{data.AsalProduk}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <img matListIcon img src="https://img.icons8.com/ios-glyphs/30/000000/delivery--v1.png" />
+            <p matLine>Dikirim Dari</p>
+            <h3 mat-line>{{data.DikirimDari}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>description</mat-icon>
+            <p matLine>Deskripsi Produk</p>
+            <h3 mat-line>{{data.DeskripsiProduk}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+
+        <mat-list-item>
+            <mat-icon matListIcon>attach_money</mat-icon>
+            <p matLine>HargaProduk</p>
+            <h3 mat-line>{{data.HargaProduk}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+    </mat-list>
+</div>
+<mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Tutup</button>
+</mat-dialog-actions>
