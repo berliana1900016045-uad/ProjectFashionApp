@@ -24,7 +24,7 @@ export class AddprodukComponent implements OnInit {
   user: any = {};
   idx: any;
   verticalPosition: MatSnackBarVerticalPosition = 'top';
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
 
   constructor(
     public dialog: MatDialog,
