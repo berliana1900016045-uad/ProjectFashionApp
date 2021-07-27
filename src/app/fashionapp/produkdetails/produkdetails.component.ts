@@ -30,7 +30,7 @@ export interface Item {
 export class ProdukdetailsComponent implements OnInit {
   userData: any = {};
   verticalPosition: MatSnackBarVerticalPosition = 'top';
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
 
   user: any = {};
 
@@ -59,7 +59,7 @@ export class ProdukdetailsComponent implements OnInit {
         .doc(doc)
         .set(this.data)
         .then((res) => {
-          this.snackbar.open('Selamat data anda berhasil disimpan!', 'ok', {
+          this.snackbar.open(':  :  Selamat data anda berhasil disimpan!', 'ok', {
             verticalPosition: this.verticalPosition,
             horizontalPosition: this.horizontalPosition,
           });
@@ -82,7 +82,7 @@ export class ProdukdetailsComponent implements OnInit {
         .doc(this.data.id)
         .update(this.data)
         .then((res) => {
-          this.snackbar.open('Selamat data anda berhasil diupdate!', 'ok', {
+          this.snackbar.open(': :  Selamat data anda berhasil diupdate!', 'ok', {
             verticalPosition: this.verticalPosition,
             horizontalPosition: this.horizontalPosition,
           });

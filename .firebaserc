@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "fashion-app-ac89c"
+  },
+  "targets": {
+    "fashion-app-ac89c": {
+      "hosting": {
+        "Fashion-Apps": [
+          "fashion-app-ac89c"
+        ]
+      }
+    }
   }
 }

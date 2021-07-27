@@ -31,6 +31,13 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
 
+// Notification
+snack-bar-container.notification simple-sncak-bar {
+    background-color: #679436;
+    color: white;
+    font-weight: bold;
+}
+
 body { margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
     font-family: 'Bodoni Moda', serif;
